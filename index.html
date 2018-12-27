@@ -1,43 +1,112 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Humrang Music - Music Duo of Aditya Dipankar &amp; Mujeeb Shaikh</title>
-		<meta name="description" content="Inspired by poetry & music of the soul and matters of the heart" />
-		<meta name="keywords" content="canvas, ambient, background, animation, javascript, demo, web development" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo3.css" />
-		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	<body class="demo-3">
-		<main>
-			<div class="frame">
-				<div class="frame__title-wrap">
-					<!-- <h1 class="frame__title">Ambient Canvas Backgrounds</h1> -->
-				</div>
-				<a class="frame__github" href="https://github.com/codrops/AmbientCanvasBackgrounds/" target="_blank">Beautiful background by</a>
-				<div class="frame__links">
-					<!-- <a href="https://tympanus.net/Development/MotionTransitionEffect/">Previous Demo</a> -->
-					<!-- <a href="https://tympanus.net/codrops/?p=36743">Article</a> -->
-				</div>
-				<!-- <div class="frame__demos">
-					<a href="index.html" class="frame__demo">Aurora</a>
-					<a href="index2.html" class="frame__demo">Swirl</a>
-					<a href="index3.html" class="frame__demo frame__demo--current">Shift</a>
-					<a href="index4.html" class="frame__demo">Coalesce</a>
-					<a href="index5.html" class="frame__demo">Pipeline</a>
-				</div> -->
-			</div>
-			<div class="content content--canvas">
-				<h2 class="content__title">Humrang</h2>
-			</div>
-		</main>
-		<script src="js/noise.min.js"></script>
-		<script src="js/util.js"></script>
-		<script src="js/shift.js"></script>
-	</body>
+<html>
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="ad-logo.ico"/>
+  <script></script>
+  <style>
+  body{
+    padding: 50px;
+    background: #798e97;
+    background-image: url(Humrang.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+  }
+  .container{
+    max-width: 580px;
+  }
+    h1{
+      font-family: helvetica;
+      font-size: 21px;
+      letter-spacing: -0.5px;
+      line-height: 26px;
+      color: #9cadb5;
+      margin-top: 10px;
+      text-shadow: 0px 0px 37px rgb(59, 89, 103);
+    }
+    h2{
+      font-family: helvetica;
+      font-size: 18px;
+      letter-spacing: -0.1px;
+      line-height: 24px;
+      color: #999;
+    }
+    h3{
+      font-family: helvetica;
+      font-size: 18px;
+      letter-spacing: -0.1px;
+      line-height: 24px;
+      color: white;
+    }
+    .portfolio-item{
+      border-top: 2px solid #525f65;
+      padding-top: 17px;
+    }
+    .heading{
+      font-size: 16px;
+      border: none;
+      color: #00020a;
+      line-height: 10px;
+      clear: both;
+    }
+    a{
+      color: white;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    .social-link{
+      margin: 0px 40px 10px 0px;
+      float:left;
+    }
+    @media (max-width: 479px) {
+      /* h1{font-size: 100px;} */
+      }
+      #time{
+        color:white;
+        /* border-bottom: 2px solid #00020a; */
+        padding-bottom: 30px;
+        margin-top: 0px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class='container'>
+    <!-- <h2 class='heading'>Counting</h2> -->
+    <!-- <h1 id="time"></h1> -->
+    <img src='Humrang-logo.svg' style='height: 70px;margin-bottom:10px;'/>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Aug 4, 2018 14:40:40").getTime();
+      var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("time").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+      }, 1000);
+    </script>
+    <h1>Humrang is the music duo of Aditya Dipankar and Mujeeb Shaikh. They're inspired by poetry & music of the soul and matters of the heart.</h1>
+    <div class="portfolio-item">
+      <div class='video-embed'>
+        <h3>We're excited to share the teaser of our first song 'Main Kya Hun'. Stay in touch to stay updated on the release of the full track and more.</h1>
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fhumrangmusic%2Fvideos%2F223550931880096%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      </div>
+    </div>
+    <h2 class='heading portfolio-item'>To get in touch</h2>
+    <h2 class='social-link'><a href="mailto:humrangmusic@gmail.com?Subject=Hi" target="_blank">Email</a></h2>
+    <h2 class='social-link'><a href="https://www.facebook.com/humrangmusic" target="_blank">Facebook</a></h2>
+    <h2 class='social-link'><a href="https://www.instagram.com/humrangmusic" target="_blank">Instagram</a></h2>
+  </div>
+</body>
+
 </html>

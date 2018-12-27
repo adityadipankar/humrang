@@ -97,8 +97,9 @@ a:focus {
 	margin: -5.5vw 0 0 0;
 	z-index: 100;
 	font-size: 10vw;
-	color: var(--color-title);
+	color: white;
 	line-height: 1;
+	font-size: 24px;
 }
 
 @media screen and (min-width: 53em) {
@@ -152,5 +153,11 @@ a:focus {
 	.content {
 		height: 100vh;
 		justify-content: center;
+	}
+	.link{
+		float:left;
+	}
+	.videoShare{
+		float: left;
 	}
 }
